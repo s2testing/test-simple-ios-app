@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "JSONKit.h"
+#import "Reachability.h"
 
 @interface ViewController ()
 
@@ -21,8 +21,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    id obj = [@"{\"key\": \"value\"}" objectFromJSONString];
-    NSLog(@"obj: %@", obj);
+    NSLog(@"[[Reachability reachabilityForLocalWiFi] isReachable]: %@", @([[Reachability reachabilityForLocalWiFi] isReachable]));
 }
 
 - (void)didReceiveMemoryWarning
