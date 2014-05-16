@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "JSONKit.h"
+
 @interface ViewController ()
 
 @end
@@ -18,6 +20,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    id obj = [@"{\"key\": \"value\"}" objectFromJSONString];
+    NSLog(@"obj: %@", obj);
 }
 
 - (void)didReceiveMemoryWarning
